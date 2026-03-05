@@ -106,6 +106,12 @@ section {
     transition: 0.3s;
 }
 
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
 .card:hover {
     transform: translateY(-8px);
 }
