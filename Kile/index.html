@@ -15,7 +15,9 @@
             <ul id="nav-links">
                 <li><a href="#home">首頁</a></li>
                 <li><a href="#about">關於我</a></li>
-                <li><a href="#projects">作品集</a></li>
+                <li><a href="#experience">工作經歷</a></li>
+                <li><a href="#projects">大學專案</a></li>
+                <li><a href="#attachments">附件</a></li>
                 <li><a href="#contact">聯絡我</a></li>
             </ul>
         </nav>
@@ -30,63 +32,203 @@
         </div>
 
         <div class="hero-content">
-            <h1>Hi, I'm <span>Kile</span></h1>
+            <h1>Hi, I'm <span>Kile</span> 吳境</h1>
 
-            <p class="title">
-                Full-Stack .NET Developer | ERP System Engineer
-            </p>
+            <p class="title">Full-Stack .NET Developer | ERP System Engineer</p>
+            <p class="intro">現任崇瑋工業股份有限公司MIS副工程師，專注於軟體系統開發與流程優化。</p>
+            <p class="intro">擁有 .NET 全端開發經驗，熟悉 C# 後端架構設計、MSSQL 資料庫管理與效能優化，以及 ERP 系統維運。</p>
 
-            <p class="intro">
-                我目前任職於傳產製造業資訊部門，負責 .NET Core 全端開發、
-                C# 後端維護、MSSQL 資料庫管理與 ERP 系統整合。
-                專注於企業系統流程優化與跨系統整合開發。
-            </p>
-
-            <a href="#projects" class="btn">查看作品</a>
+            <a href="#projects" class="btn">查看專案</a>
         </div>
 
     </div>
-</section>
-
-    <section id="about">
-        <h2>關於我</h2>
-        <p>
-            這裡可以寫你的自我介紹、專業技能、經歷。
-            例如：熟悉 .NET Core、C#、MSSQL、前端開發等。
-        </p>
     </section>
 
+    <section id="about">
+
+        <h2>關於我</h2>
+
+        <div class="about-container">
+
+            <div class="about-text">
+                <p>
+                    畢業於東海大學資訊工程學系（軟體工程組），具備完整軟體開發與系統分析訓練背景。
+                </p>
+
+                <p>
+                    個性踏實負責，對工作具高度責任感與自我要求，面對專案與任務時能主動規劃時程並掌握進度。
+                </p>
+
+                <p>
+                    在程式開發與系統維運過程中，習慣先獨立分析問題、查閱技術文件與相關資料，
+                    釐清問題根因後再進行修正。
+                </p>
+
+                <p>
+                    每次排除異常後都會整理原因與改善方式，建立經驗知識，
+                    持續提升系統穩定度與開發效率。
+                </p>
+            </div>
+
+            <div class="about-highlight">
+                <ul>
+                    <li>.NET / C# 全端開發</li>
+                    <li>MSSQL 資料庫管理與效能優化</li>
+                    <li>鼎新T100 / Workflow ERP 系統維運</li>
+                    <li>系統問題分析與流程優化</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="experience">
+        <h2>工作經歷</h2>
+    
+        <div class="experience-container">
+        
+            <!-- 工作項目 1 -->
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3>崇瑋工業股份有限公司</h3>
+                    <span class="position">MIS副工程師</span>
+                </div>
+                <span class="duration">2024/08 - 至今</span>
+                <ul>
+                    <li>.NET / C# 全端專案開發</li>
+                    <li>MSSQL 資料庫管理與效能優化</li>
+                    <li>鼎新 ERP (Workflow) 管理與維護</li>
+                    <li>設計前後端整合流程，優化系統效能</li>
+                    <li>使用者系統技術支援與異常排除，管理 Active Directory 帳號建立、群組政策與權限控管，維護電腦與網路設備正常運作。</li>
+                    
+                </ul>
+            </div>
+        
+            <!-- 工作項目 2 -->
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3>鼎新電腦股份有限公司</h3>
+                    <span class="position">服務顧問師</span>
+                </div>
+                <span class="duration">2023/02 - 2024/02</span>
+                <ul>
+                    
+                    <li>鼎新 T100 / TipTop ERP 系統日常維護與異常排除</li>
+                    <li>依既有客戶營運需求進行系統客製化分析、設計與功能開發</li>
+                    <li>針對尚未上線客戶及特定產業別（流通、零售等）需求回饋，進行功能規劃與模組擴充開發</li>
+                    <li> PL/SQL 資料庫管理與效能優化</li>
+                    <li>協助跨部門進行流程整合與系統優化改善</li>
+                </ul>
+            </div>
+        
+        </div>
+    </section>
+
+
+
     <section id="projects">
-        <h2>作品集</h2>
+        <h2>大學專案</h2>
         <div class="cards">
             <div class="card">
-                <h3>專案一</h3>
-                <p>專案說明內容。</p>
-            </div>
-            <div class="card">
-                <h3>專案二</h3>
-                <p>專案說明內容。</p>
-            </div>
-            <div class="card">
-                <h3>專案三</h3>
-                <p>專案說明內容。</p>
+                <img src="images/project1.png" alt="專案圖片">
+                <div class="card-content">
+                    <h3>魔塔（Java 遊戲專案）</h3>
+                    <p><strong>專案類型：</strong>Java 物件導向程式設計</p>
+                    <p><strong>開發人數：</strong>3人團隊</p>
+                    <ul>
+                        <li>以開源專案為基礎進行功能擴充與遊戲機制改良</li>
+                        <li>負責角色數值設計（主角 / 怪物能力平衡調整）</li>
+                        <li>規劃遊戲地圖配置與關卡破關機制</li>
+                        <li>重構戰鬥系統邏輯，將原始對戰模式改為「猜拳機制決定攻擊成功與否」</li>
+                        <li>設計未來擴充構想（高等級角色可預測低等怪物出拳機率）</li>
+                    </ul>
+                </div>
             </div>
             <div class="card">
                 <img src="images/project2.jpg" alt="專案圖片">
-                <h3>POS 串接 ERP</h3>
-                <p>API 串接與資料同步設計</p>
+                <div class="card-content">
+                    <h3>自動廣告濾除系統（影像辨識 + 嵌入式整合）</h3>
+                    <p><strong>專案類型：</strong>AI影像辨識 + 硬體控制整合</p>
+                    <p><strong>開發人數：</strong>3人團隊</p>
+                    <ul>
+                        <li>使用 Python + CNN 建立廣告影像辨識模型</li>
+                        <li>收集並標註資料集，進行模型訓練與測試</li>
+                        <li>透過嵌入式開發板（ARC）與 Arduino 控制紅外線發射模組</li>
+                        <li>當系統辨識為廣告畫面時，自動發送紅外線訊號進行轉台</li>
+                    </ul>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <section id="attachments">
+        <h2>附件</h2>
+
+        <div class="attachments-wrapper">
+
+            <button class="scroll-btn left" id="scrollLeft">&#10094;</button>
+
+            <div class="attachments-container" id="attachmentsContainer">
+
+                <!-- 圖片 -->
+                <div class="attachment-card">
+                    <img src="images/成績單.png" class="gallery-item">
+                    <p>大學成績單</p>
+                </div>
+
+                <div class="attachment-card">
+                    <img src="images/成績單1.png" class="gallery-item">
+                    <p>大學成績單</p>
+                </div>
+
+                <!-- PDF -->
+                <div class="attachment-card pdf">
+                    <a href="images/專案海報.pdf" target="_blank">
+                        <img src="images/專案海報.jpg">
+                        <span class="pdf-tag">PDF</span>
+                    </a>
+                    <p>專題海報</p>
+                </div>
+
+                <!-- PDF -->
+                <div class="attachment-card pdf">
+                    <a href="images/新思科技比賽.pdf" target="_blank">
+                        <img src="images/projectimg.png">
+                        <span class="pdf-tag">PDF</span>
+                    </a>
+                    <p>2022新思科技 ARC盃 AIOT 設計競賽</p>
+                </div>
+
+
+
+            </div>
+
+            <button class="scroll-btn right" id="scrollRight">&#10095;</button>
+
         </div>
     </section>
 
     <section id="contact">
         <h2>聯絡我</h2>
-        <p>Email: kile30302@gmail.com</p>
+        <div class="contact-card">
+            <p>Email: <a href="mailto:kile30302@gmail.com">kile30302@gmail.com</a></p>
+            <!--<p>手機: 0912-345-678</p>
+            <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>-->
+        </div>
     </section>
 
     <footer>
         <p>© 2026 Kile. All Rights Reserved.</p>
     </footer>
+
+
+<!-- Lightbox 放大視窗 -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="">
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+</div>
 
     <script src="script.js"></script>
 </body>

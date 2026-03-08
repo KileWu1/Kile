@@ -55,25 +55,46 @@ nav a:hover {
 
 section {
     padding: 6rem 2rem;
-    max-width: 1100px;
+    max-width: 1150px;
     margin: auto;
 }
 
 .hero {
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    align-items: center;
 }
 
-.hero h1 {
-    font-size: 3rem;
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #38bdf8;
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.title {
+    font-weight: 600;
+    color: #38bdf8;
     margin-bottom: 1rem;
 }
 
-.hero span {
-    color: #38bdf8;
+.intro {
+    margin-bottom: 1.5rem;
+    color: #cbd5e1;
 }
 
 .btn {
@@ -92,28 +113,327 @@ section {
     background: #0ea5e9;
 }
 
+#projects h2{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+/* 移除原本左右排列 JS，改用純 CSS */
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     margin-top: 2rem;
 }
 
+/*.card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: #1e293b;
+    padding: 1.5rem;
+    border-radius: 15px;
+    transition: 0.3s;
+    gap: 1.5rem;
+}*/
+
 .card {
+    display: flex;
+    align-items: center; /* 這裡讓圖片與右側文字垂直置中 */
+    gap: 1.5rem;
     background: #1e293b;
     padding: 1.5rem;
     border-radius: 15px;
     transition: 0.3s;
 }
 
+.card-content {
+    flex: 1;
+}
+.card-content ul {
+    padding-left: 1.2rem; /* 調整點和文字距離圖片的距離 */
+    margin-top: 0.5rem;
+}
+
+.card-content ul li {
+    margin-bottom: 0.5rem; /* 每個項目間距 */
+}
+
 .card img {
-    width: 100%;
+    width: 200px;
+    height: auto;
     border-radius: 10px;
-    margin-bottom: 1rem;
+    flex-shrink: 0;
 }
 
 .card:hover {
     transform: translateY(-8px);
+}
+
+.card div {
+    flex: 1;
+}
+
+#attachments {
+    margin-top: 4rem;
+}
+
+#attachments h2{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.attachments-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.attachments-container {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+}
+
+.attachments-container::-webkit-scrollbar {
+    display: none;
+}
+
+.attachment-card {
+    min-width: 300px;
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    transition: 0.3s;
+    position: relative;
+}
+
+.attachment-card:hover {
+    transform: translateY(-6px);
+}
+
+.attachment-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.attachment-card p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #cbd5e1;
+}
+
+/* PDF標籤 */
+
+.pdf-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ef4444;
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+/* 左右按鈕 */
+
+.scroll-btn {
+    background: #0f172a;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.scroll-btn:hover {
+    background: #2563eb;
+}
+
+.left {
+    margin-right: 10px;
+}
+
+.right {
+    margin-left: 10px;
+}
+
+#about{
+    margin-top: 5rem;
+}
+
+#about h2{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+#experience {
+    margin-top: 5rem;
+}
+
+#experience h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* 單個工作卡片 */
+.experience-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 標題與職位 */
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.experience-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.position {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+}
+
+/* 時間區 */
+.duration {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* 工作描述 */
+.experience-card ul {
+    padding-left: 1.2rem;
+}
+
+.experience-card li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #e2e8f0;
+}
+
+/* 文字 */
+
+.about-text p{
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color:#cbd5e1;
+}
+
+/* 右邊 highlight */
+
+.about-highlight{
+    background:#1e293b;
+    padding:1.5rem;
+    border-radius:12px;
+}
+
+.about-highlight ul{
+    padding-left:1rem;
+}
+
+.about-highlight li{
+    margin-bottom:0.8rem;
+    color:#e2e8f0;
+}
+
+#contact {
+    margin-top: 5rem;
+    text-align: center; /* 全部居中 */
+}
+
+#contact h2 {
+    margin-bottom: 2rem;
+}
+
+.contact-card {
+    display: inline-block; /* 讓卡片自動縮放寬度 */
+    background: #1e293b;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.contact-card p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #cbd5e1;
+}
+
+.contact-card a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 footer {
@@ -143,4 +463,39 @@ footer {
     .menu-toggle {
         display: block;
     }
+    .card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .card img {
+        width: 100%;
+        max-width: 300px;
+    }
+    .card-content ul {
+        padding-left: 1rem; /* 縮小 padding 適應小螢幕 */
+    }
+    .gallery {
+        justify-content: center;
+    }
+
+    .gallery-item {
+        height: auto;
+    }
+
+    .about-container{
+        grid-template-columns:1fr;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+
 }
