@@ -65,13 +65,13 @@ const rightBtn = document.getElementById("scrollRight");
 leftBtn.addEventListener("click", () => {
     container.scrollBy({
         left: -350,
-        behavior: "smooth"
+        //behavior: "smooth"
     });
 });
 
 rightBtn.addEventListener("click", () => {
     container.scrollBy({
         left: 350,
-        behavior: "smooth"
+        //behavior: "smooth"
     });
 });
